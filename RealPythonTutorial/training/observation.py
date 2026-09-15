@@ -1,13 +1,13 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 options = Options()
 options.add_argument("--headless")
-driver = webdriver.Firefox(options=options)
+driver = webdriver.Chrome(options=options)
 driver.implicitly_wait(5)
 
 driver.get("https://bandcamp.com/discover/")

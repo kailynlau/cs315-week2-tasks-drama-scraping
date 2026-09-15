@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Firefox()  # Run in normal mode
+driver = webdriver.Chrome()  # Run in normal mode
 driver.implicitly_wait(5)
 
 driver.get("https://bandcamp.com/discover/")

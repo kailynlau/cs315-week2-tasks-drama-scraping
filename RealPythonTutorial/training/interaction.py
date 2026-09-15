@@ -2,11 +2,12 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
 
 options = Options()
 options.add_argument("--headless")
-driver = webdriver.Firefox(options=options)
+
+driver = webdriver.Chrome(options=options)
 driver.implicitly_wait(5)
 
 driver.get("https://bandcamp.com/discover/")

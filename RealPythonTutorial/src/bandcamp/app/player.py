@@ -1,6 +1,6 @@
 from bandcamp.web.pages import DiscoverPage
-from selenium.webdriver import Firefox
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver import Chrome 
+from selenium.webdriver.chrome.options import Options
 
 BANDCAMP_DISCOVER_URL = "https://bandcamp.com/discover/"
 
@@ -37,6 +37,6 @@ class Player:
         """Create a headless browser pointing to Bandcamp."""
         options = Options()
         options.add_argument("--headless")
-        browser = Firefox(options=options)
+        browser = Chrome(options=options)
         browser.get(BANDCAMP_DISCOVER_URL)
         return browser
